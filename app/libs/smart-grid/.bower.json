@@ -1,0 +1,14 @@
+{
+  "name": "smart-grid",
+  "homepage": "https://github.com/eduardomb/smart-grid",
+  "_release": "3e04275ec9",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "3e04275ec9ed15864285c7cf2f25ef5729118a27"
+  },
+  "_source": "https://github.com/eduardomb/smart-grid.git",
+  "_target": "*",
+  "_originalSource": "smart-grid",
+  "_direct": true
+}
