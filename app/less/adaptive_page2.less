@@ -1,0 +1,96 @@
+@import '../libs/bootstrap/dist/css/bootstrap.css';
+@import '../libs/smart-grid.less';
+//////////////////-> Main Page <-\\\\\\\\\\\\\\\\\\\\\\\\\
+.maket {
+	.row-flex();
+	.justify-content-md(center);
+	.empty {
+		.col();
+		.col-3();
+		.col-md-12();
+	}
+	header {
+		.col();
+		.col-3();
+		.col-md-12();
+	}
+	section#content {
+		.col();
+		.col-9();
+		.col-md-12();
+	}
+}
+//////////////////-> Header <-\\\\\\\\\\\\\\\\\\\\\\\\\
+@media screen and (max-width: 960px) {
+	.empty {
+		height: 10px !important;
+		display: none;
+	}
+	.small-menu {
+		position: relative;
+		.col();
+		.col-12();
+		text-align: center;
+		display: block;
+		z-index: 99999;
+		.toggle_menu {
+			display: block;
+		}
+		.menu {
+			display: none;
+		}
+	}
+	header {
+		position: relative;
+		z-index: 9999;
+		margin-bottom: 2rem;
+		width: 50% !important;
+		max-width: 100% !important;
+		height: 100px;
+		.nav-main {
+			.row-flex();
+			.justify-content(center);
+		}
+		.nav-logo {
+			line-height: 100px !important;
+			img {
+				margin: 0 40px;
+				width: 80px;
+			}
+			.col();
+			.col-12();
+		}
+		
+		.nav-menu {
+			display: none;
+			ul {
+				background-color: grey;
+				li {
+					padding: 0 1rem;
+					text-align: center;
+					a {
+						font-size: 1.1rem;
+					}
+				}
+			}
+		}
+	}	
+}
+@media screen and (max-width: 560px) {
+	header {
+		width: 100% !important;
+	}
+}
+//////////////////-> Content <-\\\\\\\\\\\\\\\\\\\\\\\\\
+section#content {
+	.items {
+		.row-flex();
+		.justify-content(left);
+		.justify-content-md(center);
+		.item {
+			.col-3();
+			.col-md-4();
+			.col-xs-12();
+		}
+	}
+}

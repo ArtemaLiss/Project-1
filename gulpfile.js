@@ -110,6 +110,12 @@ gulp.task('smartGrid', function() {
 smartGrid('app/libs/', settings);
 });
 
+gulp.task('reload-css',function() {
+	return gulp.src('app/css/*.css')
+		.pipe(gulp.dest('app/css'))
+		.pipe(browserSync.stream());
+});
+
 gulp.task('group-css-media', ['cssnano'] ,function() {
 	return gulp.src('app/css/main.concat.min.css')
 	.pipe(groupCssMedia())
@@ -158,6 +164,14 @@ gulp.task('build-project', ['cleanDist'] ,function() {
 });
 
 gulp.task('default-exe', ['jsnano', 'browser-sync', 'clean', 'group-css-media', 'pug'],function() {
+	gulp.watch('app/**/*.css', function() {
+		return gulp.src('')
+			.pipe(browserSync.stream());
+	});
+	gulp.watch('app/**/*.less', function() {
+		return gulp.src('')
+			.pipe(browserSync.stream());
+	});
 	gulp.watch('app/**/*.less', ['group-css-media']);
 	gulp.watch('app/**/*.js', ['jsnano']);
 	gulp.watch('app/**/*.pug', ['pug']);

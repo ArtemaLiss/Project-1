@@ -1,0 +1,134 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+body {
+  overflow: hidden;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+a:checked {
+  text-decoration: none;
+}
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+.large-header {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+}
+#demo-canvas {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+}
+header {
+  height: 100px;
+  padding: 1rem;
+  text-align: left;
+}
+header .favorite {
+  z-index: 10;
+  font-family: "Gabriola";
+  line-height: 100px;
+  font-size: 50px;
+  text-align: right;
+}
+header .favorite i {
+  color: #fff;
+}
+header .favorite i:hover {
+  cursor: pointer;
+}
+section#logo-project {
+  margin-top: 20vh;
+}
+section#logo-project span {
+  color: #fff;
+  z-index: 10;
+  line-height: 4rem;
+  margin-bottom: 1rem;
+  font-family: "Courier";
+  font-size: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+section#search {
+  margin-right: 70px !important;
+}
+section#search .search {
+  z-index: 10;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+section#search .search input[type="text"] {
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  transition: all 0.5s ease;
+  width: 70%;
+  height: 40px;
+  border-top-left-radius: 10px;
+  border-right: none;
+  box-shadow: 0 4px 12px -4px gray;
+}
+section#search .search input[type="text"]:focus {
+  width: 80%;
+}
+section#search .search input[type="text"]:before {
+  content: '1451234231';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+section#search .search button {
+  background-color: #7575F6;
+  border: none;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  width: 80px;
+  height: 42px;
+}
+section#search .search button i {
+  color: #fff;
+  margin-right: 7px;
+}
+section#search .search i {
+  margin-left: 10px;
+  font-size: 20px;
+}
+section#search .search i:hover {
+  cursor: pointer;
+}
+section#visible-book {
+  text-align: center;
+}
+section#visible-book .content {
+  z-index: 10;
+  margin: 6rem;
+}
+section#visible-book .content i {
+  transition: all 0.5s ease;
+  margin: 0 10px;
+  font-size: 30px;
+  color: #fff;
+}
+section#visible-book .content span a {
+  color: #fff;
+  font-family: "Lucida Console";
+  font-size: 2rem;
+}
+section#visible-book .content span:hover i {
+  margin: 0px;
+}
+section#visible-book .content span:hover a {
+  text-decoration: line-through;
+}

@@ -1,0 +1,141 @@
+//////////////////-> Basic setting <-\\\\\\\\\\\\\\\\\\\\\\\\\
+body,html {
+	font-size: 16px;
+	background-color: #F2F2F2;
+}
+body {
+	overflow-x: hidden;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+a:checked {
+	text-decoration: none;
+}
+//////////////////-> My class <-\\\\\\\\\\\\\\\\\\\\\\\\\
+i.toggle_menu {
+	font-size: 1.5rem;
+	color: black;
+	display: none;
+	&:hover {
+		cursor: pointer;
+	}
+}
+//////////////////-> Header <-\\\\\\\\\\\\\\\\\\\\\\\\\
+.small-menu {
+	display: none;
+	ul {
+		padding: 0;
+		li {
+			list-style: none;
+			width: 100%;
+			&:hover {
+				background-color: #fff;
+				border-radius: 5px;
+				a {
+					color: black;
+					text-decoration: line-through;
+				}
+			}
+			a {
+				color: grey;
+				font-size: 1.3rem;
+				text-transform: uppercase;
+				line-height: 3rem;
+			}
+		}
+	}		
+}
+.empty {
+	position: relative;
+	max-width: 350px;
+	min-width: 210px;
+	height: 100vh;	
+}
+header {
+	margin-bottom: 0 !important;
+	position: fixed;
+	max-width: 350px;
+	min-width: 210px;
+	height: 100vh;
+	background: linear-gradient(to bottom, #4AD391, #4CC4EA);
+	text-align: center;
+	.nav-logo {
+		img {
+			width: 150px;
+			margin: 40px;
+		}
+	}
+	.nav-menu {
+		ul {
+			padding: 0;
+			li {
+				list-style: none;
+				width: 100%;
+				&:hover {
+					background-color: #fff;
+					border-radius: 5px;
+					a {
+						color: black;
+						text-decoration: line-through;
+					}
+				}
+				a {
+					font-family: "Franklin Gothic Medium";
+					color: #fff;
+					font-size: 1.3rem;
+					text-transform: uppercase;
+					line-height: 3rem;
+				}
+			}
+		}
+	}
+}
+//////////////////-> Content <-\\\\\\\\\\\\\\\\\\\\\\\\\
+section#content {
+	.items {
+		margin-top: 1rem;
+		.item {
+			width: 100%;
+			min-height: 30vh;
+			background: linear-gradient(-45deg, #B8B8B8, #ACACAC);
+			margin: 0.3em;
+			text-align: center;
+			border: 1px dotted black;
+			overflow: hidden;
+			position: relative;
+			img {
+				width: 500px;
+				transform-origin: center;
+				transition: all 70s ease;
+			}
+			i {
+				font-size: 5rem;
+				color: #fff;
+			}
+			&:hover {
+				cursor: pointer;
+				opacity: 0.7;
+				border: 1px solid black;
+				img {
+					transform: rotate(360deg);
+				}
+			}
+			
+			span {
+				vertical-align: bottom;
+				font-family: "Tahoma";
+				margin-left: 7%;
+				display: block;
+				font-size: 1.5rem;
+				color: #fff;
+				text-transform: uppercase;
+				letter-spacing: 1rem;
+				margin-bottom: 2rem;
+			}
+		}
+	}
+}
+
+

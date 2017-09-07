@@ -1,2 +1,46 @@
-@import '../libs/bootstrap/dist/css/bootstrap.css';
 @import '../libs/smart-grid.less';
+//////////////////-> All <-\\\\\\\\\\\\\\\\\\\\\\\\\
+@media screen and (max-width: 620px) {
+	body,html {
+		font-size: 10px;
+	}
+}
+//////////////////-> Header <-\\\\\\\\\\\\\\\\\\\\\\\\\
+header {
+	
+	.content {
+		.row-flex();
+	}
+	.favorite {
+		.col();
+		.col-10();
+	}
+}
+//////////////////-> Logo <-\\\\\\\\\\\\\\\\\\\\\\\\\
+section#logo-project {
+	.row-flex();
+	.justify-content(center);
+	span {
+		.col();
+		.col-12();
+	}
+}
+//////////////////-> Search <-\\\\\\\\\\\\\\\\\\\\\\\\\
+section#search {
+	.row-flex();
+	.justify-content(center);
+	.search {
+		.col();
+		.col-7();
+		.col-sm-12();
+	}
+}
+//////////////////-> Visible book <-\\\\\\\\\\\\\\\\\\\\\\\\\
+section#visible-book {
+	.row-flex();
+	.justify-content(center);
+	.content {
+		.col();
+		.col-12();
+	}
+}

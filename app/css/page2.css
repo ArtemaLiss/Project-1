@@ -1,0 +1,129 @@
+body,
+html {
+  font-size: 16px;
+  background-color: #F2F2F2;
+}
+body {
+  overflow-x: hidden;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+a:checked {
+  text-decoration: none;
+}
+i.toggle_menu {
+  font-size: 1.5rem;
+  color: black;
+  display: none;
+}
+i.toggle_menu:hover {
+  cursor: pointer;
+}
+.small-menu {
+  display: none;
+}
+.small-menu ul {
+  padding: 0;
+}
+.small-menu ul li {
+  list-style: none;
+  width: 100%;
+}
+.small-menu ul li:hover {
+  background-color: #fff;
+  border-radius: 5px;
+}
+.small-menu ul li:hover a {
+  color: black;
+  text-decoration: line-through;
+}
+.small-menu ul li a {
+  color: grey;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  line-height: 3rem;
+}
+.empty {
+  position: relative;
+  max-width: 350px;
+  min-width: 210px;
+  height: 100vh;
+}
+header {
+  margin-bottom: 0 !important;
+  position: fixed;
+  max-width: 350px;
+  min-width: 210px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #4AD391, #4CC4EA);
+  text-align: center;
+}
+header .nav-logo img {
+  width: 150px;
+  margin: 40px;
+}
+header .nav-menu ul {
+  padding: 0;
+}
+header .nav-menu ul li {
+  list-style: none;
+  width: 100%;
+}
+header .nav-menu ul li:hover {
+  background-color: #fff;
+  border-radius: 5px;
+}
+header .nav-menu ul li:hover a {
+  color: black;
+  text-decoration: line-through;
+}
+header .nav-menu ul li a {
+  font-family: "Franklin Gothic Medium";
+  color: #fff;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  line-height: 3rem;
+}
+section#content .items {
+  margin-top: 1rem;
+}
+section#content .items .item {
+  width: 100%;
+  min-height: 30vh;
+  background: linear-gradient(-45deg, #B8B8B8, #ACACAC);
+  margin: 0.3em;
+  text-align: center;
+  border: 1px dotted black;
+  overflow: hidden;
+  position: relative;
+}
+section#content .items .item img {
+  width: 500px;
+  transform-origin: center;
+  transition: all 70s ease;
+}
+section#content .items .item i {
+  font-size: 5rem;
+  color: #fff;
+}
+section#content .items .item:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  border: 1px solid black;
+}
+section#content .items .item:hover img {
+  transform: rotate(360deg);
+}
+section#content .items .item span {
+  vertical-align: bottom;
+  font-family: "Tahoma";
+  margin-left: 7%;
+  display: block;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  margin-bottom: 2rem;
+}
