@@ -6,19 +6,29 @@ $(document).ready(function() {
 			}	
 		});
 	});
-//	$test = ('.favorite i');
-//	if ($test.is(':hover')) {
-//		$('.favorite i').removeClass();
-//		$('.favorite i').addClass('fa fa-heart');		
-//	} else {
-//		$('.favorite i').removeClass();
-//		$('.favorite i').addClass('fa fa-heart-o');		
-//	}
-	$('#heart').hover(function() {	
-		$('#heart').removeClass();
-		$('#heart').addClass('fa fa-heart');
+	$('i#heart').hover(function() {	
+		$(this).removeClass();
+		$(this).addClass('fa fa-heart');
 	}, function() {
-		$('#heart').removeClass();
-		$('#heart').addClass('fa fa-heart-o');			
+		$(this).removeClass();
+		$(this).addClass('fa fa-heart-o');			
 	});
+	
+	$('button[name="search-button"]').on('click', function() {
+		$('input[name="search"]').css({
+			width: '50%',
+			background: '#fff',
+			'border-radius': '90px 0 0 90px'
+		});
+		$('button[name="search-button"]').css({
+			'border-radius': '0 90px 90px 0'	
+		});
+	});
+	
+	$('.toggle-block').on('click', function() {
+		$('.info-from-us').slideToggle("slow");	
+	});
+	
 });
+	
+	

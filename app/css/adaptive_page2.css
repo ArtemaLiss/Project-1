@@ -1,141 +1,173 @@
-@import '../libs/bootstrap/dist/css/bootstrap.css';
-.maket {
+footer .info-from-us {
   display: flex;
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
+  justify-content: center;
 }
-@media screen and (max-width: 960px) {
-  .maket {
-    justify-content: center;
-  }
-}
-.maket .empty {
+footer .info-from-us .block {
   box-sizing: border-box;
   margin-left: 15px;
   margin-right: 15px;
   word-wrap: break-word;
-  width: calc(25% - 30px);
+  width: calc(50% - 30px);
 }
-@media screen and (max-width: 960px) {
-  .maket .empty {
+@media screen and (max-width: 560px) {
+  footer .info-from-us .block {
     width: calc(100% - 30px);
   }
 }
-.maket header {
+footer .info-from-us .toggle-block {
   box-sizing: border-box;
   margin-left: 15px;
   margin-right: 15px;
   word-wrap: break-word;
-  width: calc(25% - 30px);
+  width: calc(100% - 30px);
 }
-@media screen and (max-width: 960px) {
-  .maket header {
-    width: calc(100% - 30px);
-  }
+header .head-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  justify-content: center;
 }
-.maket section#content {
+header .head-content .head-logo {
   box-sizing: border-box;
   margin-left: 15px;
   margin-right: 15px;
   word-wrap: break-word;
-  width: calc(75% - 30px);
+  width: calc(16.666666666666668% - 30px);
 }
-@media screen and (max-width: 960px) {
-  .maket section#content {
-    width: calc(100% - 30px);
+@media screen and (max-width: 780px) {
+  header .head-content .head-logo {
+    width: calc(58.333333333333336% - 30px);
   }
 }
-@media screen and (max-width: 960px) {
-  .empty {
-    height: 10px !important;
-    display: none;
-  }
-  .small-menu {
-    position: relative;
-    box-sizing: border-box;
-    margin-left: 15px;
-    margin-right: 15px;
-    word-wrap: break-word;
+header .head-content .head-search {
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(58.333333333333336% - 30px);
+}
+@media screen and (max-width: 780px) {
+  header .head-content .head-search {
     width: calc(100% - 30px);
-    text-align: center;
-    display: block;
-    z-index: 99999;
-  }
-  .small-menu .toggle_menu {
-    display: block;
-  }
-  .small-menu .menu {
-    display: none;
-  }
-  header {
-    position: relative;
-    z-index: 9999;
-    margin-bottom: 2rem;
-    width: 50% !important;
-    max-width: 100% !important;
-    height: 100px;
-  }
-  header .nav-main {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
-    justify-content: center;
-  }
-  header .nav-logo {
-    line-height: 100px !important;
-    box-sizing: border-box;
-    margin-left: 15px;
-    margin-right: 15px;
-    word-wrap: break-word;
-    width: calc(100% - 30px);
-  }
-  header .nav-logo img {
-    margin: 0 40px;
-    width: 80px;
-  }
-  header .nav-menu {
-    display: none;
-  }
-  header .nav-menu ul {
-    background-color: grey;
-  }
-  header .nav-menu ul li {
-    padding: 0 1rem;
-    text-align: center;
-  }
-  header .nav-menu ul li a {
-    font-size: 1.1rem;
   }
 }
 @media screen and (max-width: 560px) {
-  header {
+  header .head-content .head-search {
+    width: calc(100% - 30px);
+  }
+}
+header .head-content .favorite {
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(8.333333333333334% - 30px);
+}
+header .head-content .favorite-small {
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(8.333333333333334% - 30px);
+}
+section#list-book .content-block .item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  justify-content: center;
+}
+section#list-book .content-block .img-book {
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(33.333333333333336% - 30px);
+}
+@media screen and (max-width: 960px) {
+  section#list-book .content-block .img-book {
+    width: calc(100% - 30px);
+  }
+}
+section#list-book .content-block .info-book {
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(50% - 30px);
+}
+@media screen and (max-width: 960px) {
+  section#list-book .content-block .info-book {
+    width: calc(100% - 30px);
+  }
+}
+section#list-book .content-block .favorite-operation {
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(16.666666666666668% - 30px);
+}
+@media screen and (max-width: 960px) {
+  section#list-book .content-block .favorite-operation {
+    width: calc(100% - 30px);
+  }
+}
+@media screen and (max-width: 960px) {
+  section#list-book {
+    text-align: center;
+  }
+  section#list-book .text {
     width: 100% !important;
   }
-}
-section#content .items {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
-  justify-content: left;
-}
-@media screen and (max-width: 960px) {
-  section#content .items {
-    justify-content: center;
+  section#list-book .info-book button[name="add-favorite"] {
+    display: inline-block;
+  }
+  section#list-book .info-book button {
+    margin-top: 2% !important;
+  }
+  section#list-book .favorite-operation {
+    display: none;
   }
 }
-section#content .items .item {
-  width: calc(25% - 30px);
-}
-@media screen and (max-width: 960px) {
-  section#content .items .item {
-    width: calc(33.333333333333336% - 30px);
+@media screen and (max-width: 780px) {
+  header .head-logo {
+    text-align: left;
+  }
+  header .head-search {
+    text-align: center;
+  }
+  header .head-search input {
+    background-color: #fff;
+    width: 70% !important;
+    border-radius: 90px 0 0 90px;
+  }
+  header .head-search button {
+    border-radius: 0 90px 90px 0;
+  }
+  header img#wave {
+    display: block;
+    margin-top: 20px;
+  }
+  header .favorite-small {
+    display: block;
+  }
+  header .favorite {
+    display: none;
+  }
+  section#list-book .item .text .head-book {
+    text-align: center;
   }
 }
 @media screen and (max-width: 560px) {
-  section#content .items .item {
-    width: calc(100% - 30px);
+  footer .block {
+    margin: 10px !important;
+  }
+  footer .block:last-child {
+    border: none;
   }
 }
