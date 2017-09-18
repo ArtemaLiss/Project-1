@@ -4,7 +4,7 @@
 //////////////////-> Basic setting <-\\\\\\\\\\\\\\\\\\\\\\\\\
 body,html {
 	font-size: 16px;
-	background-color: #F2F2F2;
+	background-color: #fff;
 	margin: 0;
 	padding: 0;
 }
@@ -65,23 +65,26 @@ footer {
 }
 //////////////////-> Header <-\\\\\\\\\\\\\\\\\\\\\\\\\
 header {
-	margin-top: 1%;
+	padding-top: 1%;
+	background-color: #01ADEF;
+	height: 100px;
+	height: 100%;
 	.head-logo {
-		text-align: center;
+		margin-right: 0 !important;
+		text-align: right;
 		img {
 			width: 100px;
-			height: auto;
+			line-height: 100px;
 		}
 		&:hover {
 			cursor: pointer;
 		}
 	}
 	.head-search {
+		line-height: 90px;
 		text-align: right;
-		margin-top: 25px;
 		i {
-			margin-bottom: 3px;
-			font-size: 19px;
+			color: #01ADEF;
 		}
 		input {
 			position: relative;
@@ -99,7 +102,7 @@ header {
 			}
 		}
 		button {
-			background-color: #2D8086;
+			background-color: #006F9A;
 			transition: all 0.5s ease;
 			outline: none;
 			border: none;
@@ -111,15 +114,12 @@ header {
 			}
 		}
 	}
-	img#wave {
-		display: none;
-	}
-	.favorite {
+	.favorite {	
 		position: relative;
 		i {
 			font-size: 3.5rem;
-			margin-top: 23px;
-			color: #2D8086;
+			line-height: 90px;
+			color: #006F9A;
 		}
 //		img {
 //			width: 70px;
@@ -131,8 +131,8 @@ header {
 		position: relative;
 		i {
 			font-size: 3rem;
-			line-height: 100px;
-			color: #2D8086;
+			line-height: 90px;
+			color: #006F9A;
 		}
 //		img {
 //			width: 70px;
@@ -159,11 +159,10 @@ section#list-book {
 		margin-top: 3%;
 		.item {
 			.line {
-				width: 70%;
-				padding: 2px;
+				width: 50%;
 				border-radius: 50px;
 				border: 1.5px solid grey;
-				margin: 1rem;
+				margin: 1.5rem;
 			}
 			&:last-child {
 				margin-bottom: 2rem;
@@ -192,31 +191,18 @@ section#list-book {
 	.info-book {
 		.text {
 			.head-book {
-				background-color: #267173;
-				max-width: 1500px;
-				height: 30px;
-				height: 100%;
-				position: relative;
 				margin-bottom: 10px;
-				opacity: 0.8;
-				box-shadow: 1px 1px 10px lightgrey;
-				padding: 10px;
-				border-radius: 5px;	
-				position: relative;
 				-moz-transition: all 0.1s ease-out;
 				-o-transition: all 0.1s ease-out;
 				-webkit-transition: all 0.1s ease-out;
-				&:hover {	
-					box-shadow: 0px 3px 10px grey;
-				}
 				h2 {
 					margin: 0;
 					line-height: 27px;
-					width: 100%;
+					width: 80%;
 					font-family: 'Segoe UI', sans-serif;
-					font-size: 1.3rem;
+					font-size: 1.5rem;
 					a {
-						color: #DFE5E9;	
+						color: #222;	
 					}
 				}
 			}
@@ -233,7 +219,7 @@ section#list-book {
 			height: 40px;
 			border: none;
 			border-radius: 5px;
-			background-color: #5E80C9;
+			background-color: #00ABF0;
 			color: #fff;
 			font-weight: 700;
 			-moz-transition: all 0.2s ease-out;

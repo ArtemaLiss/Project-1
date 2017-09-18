@@ -38,9 +38,9 @@ header .head-content .head-logo {
   word-wrap: break-word;
   width: calc(16.666666666666668% - 30px);
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 560px) {
   header .head-content .head-logo {
-    width: calc(58.333333333333336% - 30px);
+    width: calc(75% - 30px);
   }
 }
 header .head-content .head-search {
@@ -57,7 +57,7 @@ header .head-content .head-search {
 }
 @media screen and (max-width: 560px) {
   header .head-content .head-search {
-    width: calc(100% - 30px);
+    width: calc(83.33333333333334% - 30px);
   }
 }
 header .head-content .favorite {
@@ -72,7 +72,7 @@ header .head-content .favorite-small {
   margin-left: 15px;
   margin-right: 15px;
   word-wrap: break-word;
-  width: calc(8.333333333333334% - 30px);
+  width: calc(25% - 30px);
 }
 section#list-book .content-block .item {
   display: flex;
@@ -119,9 +119,12 @@ section#list-book .content-block .favorite-operation {
 }
 @media screen and (max-width: 960px) {
   section#list-book {
-    text-align: center;
+    text-align: center !important;
   }
   section#list-book .text {
+    width: 100% !important;
+  }
+  section#list-book .text .head-book h2 {
     width: 100% !important;
   }
   section#list-book .info-book button[name="add-favorite"] {
@@ -134,30 +137,25 @@ section#list-book .content-block .favorite-operation {
     display: none;
   }
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 580px) {
   header .head-logo {
     text-align: left;
   }
+  header .head-logo img {
+    margin-top: 17px;
+    width: 70px;
+  }
   header .head-search {
     text-align: center;
-  }
-  header .head-search input {
-    background-color: #fff;
-    width: 70% !important;
-    border-radius: 90px 0 0 90px;
-  }
-  header .head-search button {
-    border-radius: 0 90px 90px 0;
-  }
-  header img#wave {
-    display: block;
-    margin-top: 20px;
   }
   header .favorite-small {
     display: block;
   }
   header .favorite {
     display: none;
+  }
+  section#list-book .item {
+    margin-top: 6rem;
   }
   section#list-book .item .text .head-book {
     text-align: center;

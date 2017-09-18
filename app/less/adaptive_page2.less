@@ -24,13 +24,13 @@ header {
 		.head-logo {
 			.col();
 			.col-2();
-			.col-sm-7();
+			.col-xs-9();
 		}
 		.head-search {
 			.col();
 			.col-7();
 			.col-sm-12();
-			.col-xs-12();
+			.col-xs-10();
 		}
 		.favorite {
 			.col();
@@ -38,7 +38,7 @@ header {
 		}
 		.favorite-small {
 			.col();
-			.col-1();
+			.col-3();
 		}
 	}	
 }
@@ -69,9 +69,14 @@ section#list-book {
 //////////////////-> Media require <-\\\\\\\\\\\\\\\\\\\\\\\\\
 @media screen and (max-width: 960px) {
 	section#list-book {
-		text-align: center;
+		text-align: center !important;
 		.text {
 			width: 100% !important; 
+			.head-book {
+				h2 {
+					width: 100% !important;
+				}
+			}
 		}
 		.info-book {
 			button[name="add-favorite"] {
@@ -86,25 +91,23 @@ section#list-book {
 		}
 	}	
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 580px) {
 	header {
 		.head-logo {
 			text-align: left;
+			img {
+				margin-top: 17px;
+				width: 70px;
+			}
 		}
 		.head-search {
 			text-align: center;
 			input {
-				background-color: #fff;
-				width: 70% !important;
-				border-radius: 90px 0 0 90px;
+					
 			}
 			button {
-				border-radius: 0 90px 90px 0;	
+					
 			}
-		}
-		img#wave {
-			display: block;
-			margin-top: 20px;
 		}
 		.favorite-small {
 			display: block;
@@ -115,6 +118,7 @@ section#list-book {
 	}
 	section#list-book {
 		.item {
+			margin-top: 6rem;
 			.text {
 				.head-book {
 					text-align: center;
