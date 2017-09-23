@@ -51,10 +51,32 @@
 		<header>
 			<div class="head-content">
 				<div class="head-logo">
-					<img src="http://sovahosting.com/wp-content/uploads/2016/01/sova-logo-1.png" alt="">
-				</div>
-				<div class="favorite-small">
-					<i class="fa fa-bookmark" aria-hidden="true"></i>
+					<svg version="1.1" id="Слой_2" class="logoSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+						<style type="text/css">
+							.st0{fill:#006F9A;}
+							.st1{fill:#01ADEF;}
+							.st2{font-family:'Gabriola';}
+							.st3{font-size:200px;}
+						</style>
+						<g id="XMLID_1_">
+							<g>
+								<path class="st0" d="M132.9,29.5c56,0,101.4,47,101.4,105s-45.4,105-101.4,105s-101.4-47-101.4-105S76.9,29.5,132.9,29.5z
+													 M231,135c0-56.3-44.1-102-98.5-102S34,78.7,34,135s44.1,102,98.5,102S231,191.3,231,135z"/>
+								<ellipse class="st0" cx="132.5" cy="135" rx="98.5" ry="102"/>
+							</g>
+							<g>
+							</g>
+						</g>
+						<text transform="matrix(1 0 0 1 99.3335 185.667)" class="st1 st2 st3">L</text>
+						<polygon class="st1" points="155.1,69.1 151.3,70.1 148.5,67.3 149.6,63.6 153.3,62.6 156.1,65.3 "/>
+						<polygon class="st1" points="142.5,111 135.7,111.7 131.7,106.2 134.5,100 141.3,99.3 145.3,104.8 "/>
+						<polygon class="st1" points="139,84.5 135.9,79.8 138.4,74.8 144,74.5 147.1,79.2 144.6,84.2 "/>
+						<polygon class="st1" points="147,102 150.2,89.4 162.7,85.9 172,95 168.8,107.6 156.3,111.1 "/>
+						<polygon class="st1" points="181,111.3 168,111.3 161.5,122.5 168,133.7 181,133.7 187.5,122.5 "/>
+						<polygon class="st1" points="151,138.5 140.2,143.2 130.7,136.2 132,124.5 142.8,119.8 152.3,126.8 "/>
+					</svg>
+
 				</div>
 				<div class="head-search">
 					<input type="text" placeholder="Search.." name="search">
@@ -62,8 +84,11 @@
 						<i class="fa fa-search" aria-hidden="true"></i>	
 					</button>
 				</div>
-				<div class="favorite">
-					<a href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+				<div class="sidebar-menu-icon">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</div>
+				<div class="sidebar-menu-icon-close">
+					<i class="fa fa-times close-menu" aria-hidden="true"></i>
 				</div>
 			</div>
 		</header>
@@ -71,7 +96,8 @@
 			<div class="content-block">
 				<div class="item item-1">
 					<div class="img-book">
-						<img src="imgs/books/test.jpg" alt="">	
+						<img src="imgs/books/test.jpg" alt="" id="bookImg">
+						<a href="#"><div class="add-favorite"></div></a>
 					</div>
 					<div class="info-book">
 						<button type="button" name="add-favorite">
@@ -84,28 +110,33 @@
 							<div class="head-book">
 								<h2><a href="#">Название книги и автор этой книги с инициалами в полной форме</a></h2>
 							</div>
-							<span>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Страну дороге сбить использовало осталось несколько, скатился букв своих пунктуация вершину заголовок текста коварных правилами. Осталось путь, всеми первую они решила, переулка пор сих несколько, букв правилами безорфографичный ты. Наш знаках они щеке по всей на берегу.</span>
+							<p id="author"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Автор: <span>Николай Николаевич Николаев</span></p>
+							<br>
+							<p id="year"><i class="fa fa-university" aria-hidden="true"></i> Год издания: <span>2006</span></p>
 						</div>
 						<br>
-						<button type="button" name="open">
-							<span>
-								Open
-								<i class="fa fa-external-link" aria-hidden="true"></i>
-							</span>
-						</button>
-						<button type="button" name="download">
-							<span>
-								Download
-								<i class="fa fa-download" aria-hidden="true"></i>
-							</span>
-						</button>
+						<img src="imgs/waves.png" alt="" class="wave">
+						<div class="buttons">
+							<button type="button" name="open">
+								<span>
+									Open
+									<i class="fa fa-external-link" aria-hidden="true"></i>
+								</span>
+							</button>
+							<button type="button" name="download">
+								<span>
+									Download
+									<i class="fa fa-download" aria-hidden="true"></i>
+								</span>
+							</button>
+						</div>
 					</div>
-
 					<div class="line"></div>
 				</div>
 				<div class="item item-1">
 					<div class="img-book">
-						<img src="imgs/books/test.jpg" alt="">	
+						<img src="imgs/books/test.jpg" alt="">
+						<a href="#"><div class="add-favorite"></div></a>	
 					</div>
 					<div class="info-book">
 						<button type="button" name="add-favorite">
@@ -118,65 +149,50 @@
 							<div class="head-book">
 								<h2><a href="#">Название книги и автор этой книги с инициалами в полной форме</a></h2>
 							</div>
-							<span>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Страну дороге сбить использовало осталось несколько, скатился букв своих пунктуация вершину заголовок текста коварных правилами. Осталось путь, всеми первую они решила, переулка пор сих несколько, букв правилами безорфографичный ты. Наш знаках они щеке по всей на берегу.</span>
+							<p id="author"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Автор: <span>Николай Николаевич Николаев</span></p>
+							<br>
+							<p id="year"><i class="fa fa-university" aria-hidden="true"></i> Год издания: <span>2006</span></p>
 						</div>
-						<img src="imgs/waves.png" alt="">
 						<br>
-						<button type="button" name="open">
-							<span>
-								Open
-								<i class="fa fa-external-link" aria-hidden="true"></i>
-							</span>
-						</button>
-						<button type="button" name="download">
-							<span>
-								Download
-								<i class="fa fa-download" aria-hidden="true"></i>
-							</span>
-						</button>
-					</div>
-
-					<div class="line"></div>
-				</div>
-				<div class="item item-1">
-					<div class="img-book">
-						<img src="imgs/books/test.jpg" alt="">	
-					</div>
-					<div class="info-book">
-						<button type="button" name="add-favorite">
-							<span>
-								Add favorite
-								<i class="fa fa-heart" aria-hidden="true"></i>
-							</span>
-						</button>
-						<div class="text">
-							<div class="head-book">
-								<h2><a href="#">Название книги и автор этой книги с инициалами в полной форме</a></h2>
-							</div>
-							<span>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Страну дороге сбить использовало осталось несколько, скатился букв своих пунктуация вершину заголовок текста коварных правилами. Осталось путь, всеми первую они решила, переулка пор сих несколько, букв правилами безорфографичный ты. Наш знаках они щеке по всей на берегу.</span>
+						<img src="imgs/waves.png" alt="" class="wave">
+						<div class="buttons">
+							<button type="button" name="open">
+								<span>
+									Open
+									<i class="fa fa-external-link" aria-hidden="true"></i>
+								</span>
+							</button>
+							<button type="button" name="download">
+								<span>
+									Download
+									<i class="fa fa-download" aria-hidden="true"></i>
+								</span>
+							</button>
 						</div>
-						<img src="imgs/waves.png" alt="">
-						<br>
-						<button type="button" name="open">
-							<span>
-								Open
-								<i class="fa fa-external-link" aria-hidden="true"></i>
-							</span>
-						</button>
-						<button type="button" name="download">
-							<span>
-								Download
-								<i class="fa fa-download" aria-hidden="true"></i>
-							</span>
-						</button>
 					</div>
-
 					<div class="line"></div>
 				</div>
 			</div>
 		</section>
-		
-		
+		<section id="pagination">
+			<div class="numbers">
+				<ul>
+					<li><a href="#" class="active">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>
+			</div>
+		</section>
+		<section id="sidebar-menu">
+			<div class="content-menu">
+				<ul>
+					<li><i class="fa fa-times close-menu" aria-hidden="true"></i></li>
+					<li><a href="#">home</a></li>
+					<li><a href="#">favorite</a></li>
+					<li><a href="#">lection</a></li>
+				</ul>
+			</div>
+		</section>
 	</body>
 	<div id="scripts">
 		<script src="libs/jquery/dist/jquery.min.js" type="text/javascript"></script>

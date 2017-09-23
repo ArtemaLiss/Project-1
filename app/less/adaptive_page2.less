@@ -23,22 +23,19 @@ header {
 		.justify-content(center);
 		.head-logo {
 			.col();
-			.col-2();
-			.col-xs-9();
+			.col-3();
+			.col-xs-2();
 		}
 		.head-search {
 			.col();
 			.col-7();
-			.col-sm-12();
-			.col-xs-10();
+			.col-xs-7();
 		}
-		.favorite {
+		.sidebar-menu-icon,
+		.sidebar-menu-icons {
 			.col();
-			.col-1();
-		}
-		.favorite-small {
-			.col();
-			.col-3();
+			.col-2();
+			.col-xs-3();
 		}
 	}	
 }
@@ -66,6 +63,15 @@ section#list-book {
 		}
 	}
 }
+//////////////////-> Pagination <-\\\\\\\\\\\\\\\\\\\\\\\\\
+section#pagination {
+	.row-flex();
+	.justify-content(center);
+	.numbers {
+		.col();
+		.col-12();
+	}
+}
 //////////////////-> Media require <-\\\\\\\\\\\\\\\\\\\\\\\\\
 @media screen and (max-width: 960px) {
 	section#list-book {
@@ -82,6 +88,9 @@ section#list-book {
 			button[name="add-favorite"] {
 				display: inline-block;
 			}
+			.buttons {
+				position: relative;
+			}
 			button {
 				margin-top: 2% !important;
 			}
@@ -89,45 +98,74 @@ section#list-book {
 		.favorite-operation {
 			display: none;
 		}
-	}	
+		.line {
+			margin: 1rem !important;
+		}
+		.wave {
+			display: none;
+		}
+	}
+	section#pagination {
+		margin-top: 1%;
+	}
 }
 @media screen and (max-width: 580px) {
 	header {
+		height: 90px;
 		.head-logo {
 			text-align: left;
-			img {
-				margin-top: 17px;
-				width: 70px;
-			}
 		}
 		.head-search {
-			text-align: center;
-			input {
-					
-			}
+			line-height: 90px;
+			margin-right: 0 !important;
 			button {
-					
+				width: 50px;
+				height: 40px;
+			}
+			input {
+				height: 20px !important;
 			}
 		}
-		.favorite-small {
-			display: block;
-		}
-		.favorite {
-			display: none;
+		.sidebar-menu-icon,
+		.sidebar-menu-icon-close {
+			i {
+				line-height: 90px;
+			}
 		}
 	}
 	section#list-book {
 		.item {
-			margin-top: 6rem;
+			margin-top: 2rem;
 			.text {
 				.head-book {
 					text-align: center;
+				}
+			}
+			.info-book {
+				margin-top: 3% !important;
+			}
+			.line {
+				margin: 0rem !important;
+				width: 100% !important;
+			}
+		}
+	}
+	section#sidebar-menu {
+		.content-menu {
+			ul {
+				li {
+					.close-menu {
+						display: block;
+					}
 				}
 			}
 		}
 	}
 }
 @media screen and (max-width: 560px) {
+	section {
+		padding: 4%;
+	}
 	footer {
 		.block {
 			margin: 10px !important;

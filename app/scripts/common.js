@@ -16,7 +16,7 @@ $(document).ready(function() {
 	
 	$('button[name="search-button"]').on('click', function() {
 		$('input[name="search"]').css({
-			width: '50%',
+			width: '45%',
 			background: '#fff',
 			'border-radius': '90px 0 0 90px'
 		});
@@ -27,6 +27,50 @@ $(document).ready(function() {
 	
 	$('.toggle-block').on('click', function() {
 		$('.info-from-us').slideToggle("slow");	
+	});
+	
+	$('#bookImg').on('click', function() {
+		window.open('http://webmaster-gambit.ru', '_blank');	
+	});
+	
+	$('.sidebar-menu-icon i').on('click', function() {
+		$('#sidebar-menu').animate({ 
+			right: '0px' 
+		}, 150); 
+		$('body').animate({ 
+			right: '300px' 	
+		}, 30);
+		$('.sidebar-menu-icon').css('display', 'none');
+		$('.sidebar-menu-icon-close').css('display', 'block');
+	});
+	$('.sidebar-menu-icon-close i, .close-menu').on('click', function() {
+		$('#sidebar-menu').animate({ 
+			right: '-300px' 
+		}, 150); 
+		$('body').animate({ 
+			right: '0px' 
+		}, 1);
+		$('.sidebar-menu-icon').css('display', 'block');
+		$('.sidebar-menu-icon-close').css('display', 'none');
+	});
+	$('section:not(#sidebar-menu)').on('click', function() {
+		$('#sidebar-menu').animate({ 
+			right: '-300px' 
+		}, 150); 
+		$('body').animate({ 
+			right: '0px' 
+		}, 1);
+		$('.sidebar-menu-icon').css('display', 'block');
+		$('.sidebar-menu-icon-close').css('display', 'none');
+		
+		$('input[name="search"]').css({
+			width: '0',
+			background: 'none',
+			'border-radius': '90px 0 0 90px'
+		});
+		$('button[name="search-button"]').css({
+			'border-radius': '90px'	
+		});
 	});
 	
 });
