@@ -1,21 +1,5 @@
 @import '../libs/smart-grid.less';
 
-//////////////////-> Footer <-\\\\\\\\\\\\\\\\\\\\\\\\\
-footer {
-	.info-from-us {
-		.row-flex();
-		.justify-content(center);
-		.block {
-			.col();
-			.col-6();
-			.col-xs-12();
-		}
-		.toggle-block {
-			.col();
-			.col-12();
-		}
-	}
-}
 //////////////////-> Header <-\\\\\\\\\\\\\\\\\\\\\\\\\
 header {
 	.head-content {
@@ -31,8 +15,7 @@ header {
 			.col-7();
 			.col-xs-7();
 		}
-		.sidebar-menu-icon,
-		.sidebar-menu-icons {
+		.sidebar-menu-icon {
 			.col();
 			.col-2();
 			.col-xs-3();
@@ -126,8 +109,7 @@ section#pagination {
 				height: 20px !important;
 			}
 		}
-		.sidebar-menu-icon,
-		.sidebar-menu-icon-close {
+		.sidebar-menu-icon {
 			i {
 				line-height: 90px;
 			}
@@ -152,11 +134,9 @@ section#pagination {
 	}
 	section#sidebar-menu {
 		.content-menu {
-			ul {
-				li {
-					.close-menu {
-						display: block;
-					}
+			.sidebar-menu-icon-close {
+				i {
+					line-height: 90px;
 				}
 			}
 		}

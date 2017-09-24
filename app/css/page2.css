@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Vollkorn');
 @import url('https://fonts.googleapis.com/css?family=Crushed');
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica.eot');
+  src: url('../fonts/Helvetica.eot?#iefix') format('embedded-opentype'), url('../fonts/Helvetica.woff') format('woff'), url('../fonts/Helvetica.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+.helvetica {
+  font-family: 'Helvetica', sans-serif;
+}
 body,
 html {
   font-size: 16px;
@@ -9,8 +19,6 @@ html {
 }
 body {
   overflow-x: hidden;
-  background: url('../imgs/aboutBg.png') no-repeat center right;
-  transition: all 0.5s ease;
 }
 a,
 a:hover,
@@ -19,43 +27,141 @@ a:active,
 a:checked {
   text-decoration: none;
 }
-footer .info-from-us {
-  background-color: #4E8A8C;
-  text-align: center;
-  padding-top: 20px;
-  height: 100%;
+section#preloader {
+  transition: all 1s ease;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  background-color: black;
+  z-index: 5;
+  opacity: 0.9;
+  /* Page turn */
+  /* Dots */
 }
-footer .info-from-us .block {
-  margin-bottom: 4rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid #fff;
+section#preloader.done {
+  opacity: 0;
+  visibility: hidden;
 }
-footer .info-from-us .block i {
-  font-size: 2rem;
+section#preloader .loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-footer .info-from-us .block i#more-info:hover {
-  cursor: pointer;
+section#preloader .book {
+  border: 4px solid #FFFFFF;
+  width: 60px;
+  height: 45px;
+  perspective: 150px;
+  position: relative;
 }
-footer .info-from-us .block h2 {
-  margin: 10px 0 3px 0;
-  font-family: "Exo 2.0";
-}
-footer .info-from-us .block .info h2 {
-  font-size: 1rem;
-}
-footer .info-from-us .block .info h2 a,
-footer .info-from-us .block .info h2 span {
-  font-size: 1rem;
+section#preloader h1 {
   color: #fff;
-}
-footer .toggle-block {
   text-align: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  position: absolute;
+  bottom: -60px;
+  left: -12px;
 }
-footer .toggle-block i {
-  font-size: 3rem;
+section#preloader h1:after {
+  position: absolute;
+  content: "";
+  -webkit-animation: Dots 1s cubic-bezier(0, 0.39, 1, 0.68) infinite;
+  animation: Dots 1s cubic-bezier(0, 0.39, 1, 0.68) infinite;
 }
-footer .toggle-block i:hover {
-  cursor: pointer;
+section#preloader .page {
+  display: block;
+  width: 30px;
+  height: 45px;
+  border: 4px solid #FFFFFF;
+  border-left: 1px solid #8455b2;
+  margin: 0;
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  overflow: hidden;
+  background: #8455b2;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+section#preloader .book .page:nth-child(1) {
+  -webkit-animation: pageTurn 1.2s cubic-bezier(0, 0.39, 1, 0.68) 0.6s infinite;
+  animation: pageTurn 1.2s cubic-bezier(0, 0.39, 1, 0.68) 0.6s infinite;
+}
+section#preloader .book .page:nth-child(2) {
+  -webkit-animation: pageTurn 1.2s cubic-bezier(0, 0.39, 1, 0.68) 1.45s infinite;
+  animation: pageTurn 1.2s cubic-bezier(0, 0.39, 1, 0.68) 0.45s infinite;
+}
+section#preloader .book .page:nth-child(3) {
+  -webkit-animation: pageTurn 1.2s cubic-bezier(0, 0.39, 1, 0.68) 0.2s infinite;
+  animation: pageTurn 1.2s cubic-bezier(0, 0.39, 1, 0.68) 0.2s infinite;
+}
+@-webkit-keyframes Dots {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+@-webkit-keyframes pageTurn {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  20% {
+    background: #4b1e77;
+  }
+  40% {
+    background: rebeccapurple;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+  100% {
+    background: rebeccapurple;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+@keyframes pageTurn {
+  0% {
+    transform: rotateY(0deg);
+  }
+  20% {
+    background: #4b1e77;
+  }
+  40% {
+    background: rebeccapurple;
+    transform: rotateY(-180deg);
+  }
+  100% {
+    background: rebeccapurple;
+    transform: rotateY(-180deg);
+  }
+}
+@keyframes Dots {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
 }
 header {
   background-color: #01ADEF;
@@ -69,12 +175,7 @@ header .head-logo {
 header .head-logo .logoSvg {
   max-width: 110px;
   min-width: 80px;
-  vertical-align: middle;
-  margin-bottom: 3%;
-}
-header .head-logo .logoSvg .st3 {
-  transition: all 0.5s ease;
-  background-color: #00709D;
+  transition: all 0.2s ease;
 }
 header .head-logo .logoSvg:hover {
   opacity: 0.85;
@@ -83,7 +184,6 @@ header .head-logo .logoSvg:hover {
 header .head-search {
   line-height: 120px;
   text-align: right;
-  padding-right: 10px;
 }
 header .head-search i {
   color: #01ADEF;
@@ -119,28 +219,21 @@ header .head-search button:hover {
 header .head-search button:hover i {
   color: #006F9A;
 }
-header .sidebar-menu-icon-close {
-  display: none;
-}
-header .sidebar-menu-icon,
-header .sidebar-menu-icon-close {
+header .sidebar-menu-icon {
   text-align: left;
+  transition: all 0.3s ease;
 }
-header .sidebar-menu-icon i,
-header .sidebar-menu-icon-close i {
-  font-size: 2rem;
+header .sidebar-menu-icon i {
+  font-size: 2.2rem;
   line-height: 120px;
   color: #006F9A;
-  transition: all 0.2s ease;
 }
-header .sidebar-menu-icon i:hover,
-header .sidebar-menu-icon-close i:hover {
+header .sidebar-menu-icon i:hover {
   color: #fff;
   cursor: pointer;
 }
 section#list-book .content-block {
   margin-top: 3%;
-  height: 100%;
   position: relative;
 }
 section#list-book .content-block .item .line {
@@ -183,7 +276,7 @@ section#list-book .img-book img:hover .add-favorite {
   cursor: pointer;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  background-color: tomato;
+  background-color: #777777;
 }
 section#list-book .info-book {
   position: relative;
@@ -201,7 +294,7 @@ section#list-book .info-book .text .head-book h2 {
   margin: 0;
   line-height: 27px;
   width: 80%;
-  font-family: 'Helvetica', serif;
+  font-family: 'Helvetica', sans-serif;
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -292,17 +385,34 @@ section#pagination ul li a:hover {
 }
 section#sidebar-menu {
   padding: 0 !important;
-  right: -300px;
+  right: -250px;
   position: fixed;
   z-index: 999;
   top: 0;
 }
 section#sidebar-menu .content-menu {
+  position: relative;
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.2);
   height: 100vh;
-  width: 300px;
+  width: 250px;
   text-align: center;
   background-color: #fff;
+}
+section#sidebar-menu .content-menu .sidebar-menu-icon-close {
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: none;
+  position: absolute;
+  left: -3rem;
+}
+section#sidebar-menu .content-menu .sidebar-menu-icon-close i {
+  font-size: 2.2rem;
+  line-height: 120px;
+  color: #006F9A;
+}
+section#sidebar-menu .content-menu .sidebar-menu-icon-close i:hover {
+  color: #fff;
+  cursor: pointer;
 }
 section#sidebar-menu .content-menu ul {
   margin: 0;
@@ -311,14 +421,6 @@ section#sidebar-menu .content-menu ul {
 }
 section#sidebar-menu .content-menu ul li {
   list-style: none;
-}
-section#sidebar-menu .content-menu ul li .close-menu {
-  display: none;
-  font-size: 1.5rem;
-  opacity: 0.5;
-}
-section#sidebar-menu .content-menu ul li .close-menu:hover {
-  cursor: pointer;
 }
 section#sidebar-menu .content-menu ul li a {
   font-size: 1.5rem;
