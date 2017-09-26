@@ -22,29 +22,38 @@ a:checked {
 
 .large-header {
 	position: absolute !important;
-	
 	left: 0;
 	top: 0;
 }
 #demo-canvas {
 	position: absolute !important;
-	
 	left: 0;
 	top: 0;
 }
+.page-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url('../imgs/demo-1-bg.jpg') no-repeat center center;
+	width: 100%;
+	height: 100vh;
+	perspective: 1px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
 //////////////////-> Header <-\\\\\\\\\\\\\\\\\\\\\\\\\
 header {
-	height: 100px;
 	padding: 1rem;
 	text-align: left;
+	z-index: 1;
 	.favorite {
-		z-index: 10;
+		z-index: 999;
 		i {
 			color: #fff;
 		}
 		font-family: "Gabriola";
 		line-height: 100px;
-		font-size: 50px;
+		font-size: 40px;
 		text-align: right;
 		i:hover {
 			cursor: pointer;
@@ -56,7 +65,7 @@ section#logo-project {
 	margin-top: 20vh;
 	span {
 		color: #fff;
-		z-index: 10;
+		z-index: 999;
 		line-height: 4rem;
 		margin-bottom: 1rem;
 		font-family: "Courier";
@@ -79,19 +88,10 @@ section#search {
 			padding-left: 10px;
 			transition: all 0.5s ease;
 			width: 70%;
-			height: 40px;
-			border-top-left-radius: 10px;
-			border-right: none;
-			box-shadow: 0 4px 12px -4px gray;
+			height: 55px;
+			border-radius: 90px 0 0 90px;
 			&:focus {
 				width: 80%;
-			}
-			&:before {
-				content: '1451234231';
-				display: block;
-				position: absolute;
-				top: 0;
-				right: 0;
 			}
 		}
 		button {
@@ -101,10 +101,10 @@ section#search {
 			}
 			background-color: #7575F6;
 			border: none;
-			border-bottom-right-radius: 10px;
+			border-radius: 0 90px 90px 0;
 			position: absolute;
 			width: 80px;
-			height: 42px;
+			height: 57px;
 		}
 		i {
 			margin-left: 10px;

@@ -84,7 +84,7 @@ section#list-book .content-block .favorite-operation {
     width: calc(100% - 30px);
   }
 }
-section#pagination {
+section#pagination .content-pagination {
   display: flex;
   flex-wrap: wrap;
   margin-left: -15px;

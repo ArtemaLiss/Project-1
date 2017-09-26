@@ -10,6 +10,9 @@
 .helvetica {
   font-family: 'Helvetica', sans-serif;
 }
+.load-none {
+  display: none;
+}
 body,
 html {
   font-size: 16px;
@@ -260,7 +263,8 @@ section#list-book .img-book img {
 section#list-book .img-book .add-favorite,
 section#list-book .img-book img .add-favorite {
   transition: all 0.5s ease;
-  height: 80px;
+  opacity: 0;
+  height: 100%;
   bottom: 0;
   background: none;
   position: absolute;
@@ -271,11 +275,9 @@ section#list-book .img-book img .add-favorite {
 }
 section#list-book .img-book:hover .add-favorite,
 section#list-book .img-book img:hover .add-favorite {
-  height: 100%;
+  opacity: 1;
   background: url('../imgs/favoriteAdd2.svg') no-repeat center center;
   cursor: pointer;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
   background-color: #777777;
 }
 section#list-book .info-book {
@@ -411,8 +413,8 @@ section#sidebar-menu .content-menu .sidebar-menu-icon-close i {
   color: #006F9A;
 }
 section#sidebar-menu .content-menu .sidebar-menu-icon-close i:hover {
-  color: #fff;
   cursor: pointer;
+  color: #DE5959;
 }
 section#sidebar-menu .content-menu ul {
   margin: 0;
