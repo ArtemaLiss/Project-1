@@ -78,12 +78,12 @@ $(document).ready(function() {
 			'opacity': '1'
 		});
 		//------------------------------
-		$('input[name="search"]').css({
+		$('.head-search input[name="search"]').css({
 			width: '0',
 			background: 'none',
 			'border-radius': '90px 0 0 90px'
 		});
-		$('input[name="search"]').val('');
+		$('.head-search input[name="search"]').val('');
 		$('button[name="search-button"]').css({
 			'border-radius': '90px'	
 		});
@@ -92,7 +92,7 @@ $(document).ready(function() {
 	$('body').keyup(function(){
 		if(event.keyCode==13)
 		{
-			var input_text = $('input[name="search"]').val();
+			var input_text = $('.head-search input[name="search"]').val();
 			if (input_text != '') {
 				location.href = '../page2.html';
 			}
@@ -100,7 +100,7 @@ $(document).ready(function() {
 	});
 	// close search-input button
 	$('button[name="search-button"]').on('click', function() {
-		var input_text = $('input[name="search"]').val();
+		var input_text = $('.head-search input[name="search"]').val();
 		if (input_text != '') {
 			location.href = '../page2.html';
 		}	
