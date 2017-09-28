@@ -88,21 +88,21 @@ $(document).ready(function() {
 			'border-radius': '90px'	
 		});
 	});
-	// close search-input enter
+	// close search-input enter /books/?search=
 	$('body').keyup(function(){
 		if(event.keyCode==13)
 		{
-			var input_text = $('.head-search input[name="search"]').val();
+			var input_text = $('input[name="search"]').val();
 			if (input_text != '') {
-				location.href = '../page2.html';
+				location.href = '/books/?search=' + input_text;
 			}
 		}
 	});
 	// close search-input button
 	$('button[name="search-button"]').on('click', function() {
-		var input_text = $('.head-search input[name="search"]').val();
+		var input_text = $('input[name="search"]').val();
 		if (input_text != '') {
-			location.href = '../page2.html';
+			location.href = '/books/?search=' + input_text;
 		}	
 	});
 });
