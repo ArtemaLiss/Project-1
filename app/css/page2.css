@@ -38,7 +38,6 @@ section#preloader {
   left: 0;
   background-color: black;
   z-index: 5;
-  opacity: 0.9;
   /* Page turn */
   /* Dots */
 }
@@ -235,6 +234,17 @@ header .sidebar-menu-icon i:hover {
   color: #fff;
   cursor: pointer;
 }
+section#list-book .title-content {
+  margin-top: 2.5rem;
+}
+section#list-book .title-content .empty {
+  background-color: #01ADEF;
+  max-height: 30px;
+}
+section#list-book .title-content .title {
+  font-size: 1.2rem;
+  font-family: 'Helvetica', sans-serif;
+}
 section#list-book .content-block {
   margin-top: 3%;
   position: relative;
@@ -278,7 +288,7 @@ section#list-book .img-book img:hover .add-favorite {
   opacity: 1;
   background: url('../imgs/favoriteAdd2.svg') no-repeat center center;
   cursor: pointer;
-  background-color: #777777;
+  background-color: #222;
 }
 section#list-book .info-book {
   position: relative;

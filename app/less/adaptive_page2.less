@@ -24,6 +24,18 @@ header {
 }
 //////////////////-> List-book <-\\\\\\\\\\\\\\\\\\\\\\\\\
 section#list-book {
+	.title-content {
+		.row-flex();
+		.empty {
+			.col();
+			.col-3();
+		}
+		.title {
+			.col();
+			.col-9();
+			.col-xs-12();
+		}
+	}
 	.content-block {
 		.item {
 			.row-flex();
@@ -95,6 +107,9 @@ section#pagination {
 	}
 }
 @media screen and (max-width: 580px) {
+	body,html {
+		font-size: 14px;
+	}
 	header {
 		height: 90px;
 		.head-logo {

@@ -92,7 +92,7 @@ section#search .search input[type="text"]:focus {
   width: 80%;
 }
 section#search .search button {
-  background-color: #7575F6;
+  background-color: #006f9a;
   border: none;
   border-radius: 0 90px 90px 0;
   position: absolute;

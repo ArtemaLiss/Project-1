@@ -49,7 +49,6 @@ section#preloader {
 	left: 0;
 	background-color: black;
 	z-index: 5;
-	opacity: 0.9;
 	.loader {
 		position: absolute;
 		left: 50%;
@@ -250,6 +249,17 @@ header {
 }
 //////////////////-> List book <-\\\\\\\\\\\\\\\\\\\\\\\\\
 section#list-book {
+	.title-content {
+		margin-top: 2.5rem;
+		.empty {
+			background-color: #01ADEF;
+			max-height: 30px;
+		}
+		.title {
+			font-size: 1.2rem;
+			.helvetica;
+		}
+	}
 	.content-block {
 		margin-top: 3%;
 		position: relative;
@@ -295,7 +305,7 @@ section#list-book {
 				opacity: 1;
 				background: url('../imgs/favoriteAdd2.svg') no-repeat center center;
 				cursor: pointer;
-				background-color: #777777;
+				background-color: #222;
 			}
 		}			
 	}
