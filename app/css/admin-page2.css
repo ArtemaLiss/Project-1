@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Text+Me+One');
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica.eot');
+  src: url('../fonts/Helvetica.eot?#iefix') format('embedded-opentype'), url('../fonts/Helvetica.woff') format('woff'), url('../fonts/Helvetica.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+.helvetica {
+  font-family: 'Helvetica', sans-serif;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+a,
+a:hover,
+a:focus,
+a:visited,
+a:checked,
+a:enabled {
+  text-decoration: none;
+  color: #222;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+i.toggle_menu {
+  display: none;
+  line-height: 95px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+header {
+  height: 100px;
+  background-color: #01ADEF;
+}
+header .logo {
+  text-align: left;
+}
+header .logo h2 {
+  line-height: 95px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+header .nav-menu {
+  line-height: 95px;
+  text-align: right;
+}
+header .nav-menu ul li {
+  margin-left: 1.5rem;
+  display: inline-block;
+}
+header .nav-menu ul li a {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #fff;
+}
+header .nav-menu ul li a:hover {
+  text-decoration: line-through;
+}
+header .nav-menu-small {
+  z-index: 9999;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+}
+header .nav-menu-small .small-menu {
+  display: none;
+  text-align: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 5px -2px #c7c7c7;
+  -moz-box-shadow: 0px 3px 5px -2px #c7c7c7;
+  box-shadow: 0px 3px 5px -2px #c7c7c7;
+}
+header .nav-menu-small ul li {
+  height: 50px;
+  line-height: 50px;
+  list-style: none;
+}
+header .nav-menu-small ul li a {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+header .nav-menu-small ul li a:hover {
+  text-decoration: line-through;
+}
+section#list-book {
+  margin-top: 2rem;
+}
+section#list-book .container {
+  border: 2px dashed lightgrey;
+  padding: 1rem;
+}
+section#list-book .info-product div:first-child {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+section#list-book .info-product span {
+  line-height: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+section#list-book .operation {
+  text-align: right;
+}
+section#list-book .operation i {
+  margin-left: 0.5rem;
+}
+section#list-book .operation i:hover {
+  cursor: pointer;
+}
+section#list-book .operation .edit {
+  font-size: 1rem;
+}
+section#list-book .operation .delete {
+  font-size: 1.7rem;
+}

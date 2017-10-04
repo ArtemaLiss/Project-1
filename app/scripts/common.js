@@ -9,6 +9,28 @@ document.body.onload = function() {
 	}, 500);
 }
 
+// Admin-panel, load-img
+function handleFileSelect(evt) {
+	var file = evt.target.files; // FileList object
+	var f = file[0];
+	// Only process image files.
+	var reader = new FileReader();
+	// Closure to capture the file information.
+	reader.onload = (function(theFile) {
+		return function(e) {
+			// Render thumbnail.
+			$('.img-product span').remove();
+			var span = document.createElement('span');
+			span.innerHTML = ['<img class="thumb" title="', escape(theFile.name), '" src="', e.target.result, '" />'].join('');
+			$('.base-bg').css('display', 'none');
+			document.getElementById('output').insertBefore(span, null);
+		};
+	})(f);
+	// Read in the image file as a data URL.
+	reader.readAsDataURL(f);
+}
+document.getElementById('file').addEventListener('change', handleFileSelect, false);
+// main
 $(document).ready(function() {
 	// Hear icon translate
 	$('i#heart').hover(function() {	
@@ -105,6 +127,7 @@ $(document).ready(function() {
 			location.href = '/books/?search=' + input_text;
 		}	
 	});
+	
 });
 	
 	

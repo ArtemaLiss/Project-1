@@ -1,0 +1,237 @@
+//////////////////-> Fonts <-\\\\\\\\\\\\\\\\\\\\\\\\\
+@import url('https://fonts.googleapis.com/css?family=Text+Me+One');
+
+@font-face {
+	font-family: 'Helvetica';
+	src: url('../fonts/Helvetica.eot');
+	src: url('../fonts/Helvetica.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Helvetica.woff') format('woff'),
+		url('../fonts/Helvetica.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+.helvetica {
+	font-family: 'Helvetica', sans-serif;
+}
+///////////////////-> Basic Setting <-\\\\\\\\\\\\\\\\\\\\\\\\\\\
+body,html {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	overflow-x: hidden;
+}
+a,
+a:hover,
+a:focus,
+a:visited,
+a:checked,
+a:enabled {
+	text-decoration: none;
+	color: #222;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+}
+///////////////////-> MyClass <-\\\\\\\\\\\\\\\\\\\\\\\\\\\
+.container {
+	width: 70%;
+	margin: 0 auto;
+}
+i.toggle_menu {
+	display: none;
+	line-height: 95px;
+	font-size: 1.3rem;
+	color: #fff;
+}
+///////////////////-> Header <-\\\\\\\\\\\\\\\\\\\\\\\\\\\
+header {
+	height: 100px;
+	background-color: #01ADEF;
+	.logo {
+		text-align: left;
+		h2 {
+			line-height: 95px;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1rem;
+			color: #fff;
+			text-transform: uppercase;
+		}
+	}
+	.nav-menu {
+		line-height: 95px;
+		text-align: right;
+		ul {
+			li {
+				margin-left: 1.5rem;
+				display: inline-block;
+				a {
+					font-family: 'Montserrat', sans-serif;
+					text-transform: uppercase;
+					font-size: 0.9rem;
+					color: #fff;
+					&:hover {
+						text-decoration: line-through;	
+					}
+				}
+			}
+		}
+	}
+	.nav-menu-small {
+		z-index: 9999;
+		position: absolute;
+		top: 100px;
+		width: 100%;
+		.small-menu {
+			display: none;
+			text-align: center;
+			background-color: #fff;
+			-webkit-box-shadow: 0px 3px 5px -2px rgba(199,199,199,1);
+			-moz-box-shadow: 0px 3px 5px -2px rgba(199,199,199,1);
+			box-shadow: 0px 3px 5px -2px rgba(199,199,199,1);
+		}
+		ul {
+			li {
+				height: 50px;
+				line-height: 50px;
+				list-style: none;
+				a {
+					font-family: 'Montserrat', sans-serif;
+					text-transform: uppercase;
+					font-size: 0.9rem;
+					&:hover {
+						text-decoration: line-through;	
+					}
+				}
+			}
+		}
+	}
+}
+///////////////////-> Add-Content <-\\\\\\\\\\\\\\\\\\\\\\\\\\\
+section#add-content {
+	margin-top: 2rem;
+	.prewiew-content {
+		h2 {
+			letter-spacing: 0.1rem;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+			color: #97615B;
+		}
+		.base-bg {
+			margin-top: 1rem;
+			width: 250px;
+			height: 350px;
+			background-color: #D8D1C9;
+			border-radius: 2px;
+			position: relative;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 150px;
+				height: 150px;
+				background: url(../imgs/icon-admin-product.svg) no-repeat center center;
+			}
+		}
+		.thumb {
+			width: 250px;
+			height: 350px;
+		}
+		.file_upload {
+			margin: 2rem 0 0 3rem !important;
+			width: 150px;
+			display: block;
+			position: relative;
+			overflow: hidden;
+			line-height: 2rem;
+			background-color: none;
+			border: 2px solid #66615B;
+			border-radius: 50px;
+			text-align: center;
+			transition: all 0.3s ease-out;
+			&:hover {
+				background-color: #66615B;
+				.button {
+					color: #fff;
+				}
+			}
+		}
+		.file_upload .button {
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			width: 100px;                  
+			height: 100px; 
+			font-size: 1rem;
+			font-family: 'Montserrat', sans-serif;
+			text-transform: uppercase;
+			color: #66615B;
+		}
+		.file_upload input[type=file] {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+		}
+	}
+	.date-content {
+		.info {
+			margin: 2rem 0;
+			label {
+				margin: 0.7rem 0;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 1.2rem;
+				display: block;
+				color: #97615B;
+			}
+			input[type="text"] {
+				opacity: 1 !important;
+				font-size: 1.2rem;
+				font-family: 'Text Me One', sans-serif;
+				padding: 0 1rem;
+				outline: none;
+				height: 40px;
+				width: 100%;
+				border-radius: 7px;
+				border: 1px solid #E5E4E2;
+				&:focus {
+					border-color: #DDDDDD;
+				}
+			}	
+		}
+		.add {
+			button {
+				outline: none;
+				height: 50px;
+				width: 300px;
+				border: none;
+				border-radius: 50px;
+				background-color: #01ADEF;
+				transition: 0.2s ease-out;
+				span {
+					font-family: 'Montserrat', sans-serif;
+					text-transform: uppercase;
+					color: #fff;
+					font-weight: 700;
+				}
+				&:hover {
+					cursor: pointer;
+					background-color: #00A2E4;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

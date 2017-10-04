@@ -1,0 +1,71 @@
+@import '../libs/smart-grid.less';
+
+///////////////////-> Header <-\\\\\\\\\\\\\\\\\\\\\\\\\\\
+header {
+	.row-flex();
+	.justify-content(center);
+	.container {
+		.row-flex();
+		.justify-content(center);
+	}
+	.logo {
+		.col-4();
+		.col-xs-7();
+	}
+	.nav-menu {
+		.col-8();
+		.col-xs-5();
+	}
+}
+///////////////////-> Add-Content <-\\\\\\\\\\\\\\\\\\\\\\\\\\\
+section#add-content {
+	.row-flex();
+	.justify-content(center);
+	.container {
+		.justify-content(center);
+		.row-flex();
+		.prewiew-content {
+			.col();
+			.col-4();
+			.col-md-6();
+			.col-sm-12();
+		}
+		.date-content {
+			.col();
+			.col-8();
+			.col-md-6();
+			.col-sm-12();
+		}
+	}
+}
+
+///////////////////-> Media <-\\\\\\\\\\\\\\\\\\\\\\\\\\\
+@media screen and (min-width: 781px) {
+	.small-menu {
+		display: none !important;
+	}		
+}
+
+@media screen and (max-width: 780px) {
+	i.toggle_menu {
+		display: block !important;
+	}
+	.base-menu {
+		display: none;
+	}	
+}
+@media screen and (max-width: 560px) {
+	.container {
+		text-align: center;
+	}
+	body, html {
+		font-size: 13.5px !important;
+	}			
+}
+
+
+
+
+
+
+
